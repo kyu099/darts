@@ -28,11 +28,9 @@ document.getElementById("search").onclick = () =>{
 
             for(let i in results) {
                 if(results[0].geometry){
-                    let latlng = results[0].geometry.location; //緯度経度
-                    map.setCenter(latlng); //中心に移動
-                    setMarker(latlng);
-                    centerplace = latlng;
-                    console.log(latlng.lat(), latlng.lng());
+                    centerplace = results[0].geometry.location; //緯度経度
+                    map.setCenter(centerplace); //中心に移動
+                    setMarker(centerplace);
                 }
             }
         }
@@ -67,6 +65,19 @@ document.getElementById("darts").onclick　= () => {
 document.getElementById("reset").onclick = () => {
     deleteCircles();
     deleteMakers();
+}
+
+document.getElementById("now").onclick = () => {
+    navigator.geolocation.getCurrentPosition(
+        (p) => {
+            centerplace = new google.maps.LatLng(p.coords.latitude, p.coords.longitude);
+            map.setCenter(centerplace);
+            setMarker(centerplace);
+        },
+        (p) => {
+            alert("位置情報が取得できませんでした");
+        }
+    )
 }
 
 function setMarker(setplace){
