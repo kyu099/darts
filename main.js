@@ -43,7 +43,8 @@ document.getElementById("draw").onclick = () => {
     deleteCircles();
     if(markers == null) {alert("中心を指定してください")};
     rad = document.getElementById("rad").value;
-    setCircle(centerplace, parseFloat(rad));
+    if(rad <= 0){alert("正の値を入力してください");}
+    else {setCircle(centerplace, parseFloat(rad));}
 }
 
 document.getElementById("darts").onclick　= () => {
