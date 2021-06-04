@@ -94,7 +94,7 @@ function deleteMakers() {
     for(let i = 0; i < markers.length; i++) {
         markers[i].setMap(null);
     }
-    marker = [];
+    markers = [];
 }
 
 function setCircle(setplace, rad){
