@@ -41,7 +41,7 @@ document.getElementById("search").onclick = () =>{
 
 document.getElementById("draw").onclick = () => {
     deleteCircles();
-    if(marker == null) {alert("中心を指定してください")};
+    if(markers == null) {alert("中心を指定してください")};
     rad = document.getElementById("rad").value;
     setCircle(centerplace, parseFloat(rad));
 }
