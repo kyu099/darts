@@ -68,6 +68,9 @@ document.getElementById("reset").onclick = () => {
 }
 
 document.getElementById("now").onclick = () => {
+    deleteCircles();
+    deleteMakers();
+
     navigator.geolocation.getCurrentPosition(
         (p) => {
             centerplace = new google.maps.LatLng(p.coords.latitude, p.coords.longitude);
