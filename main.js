@@ -65,6 +65,7 @@ document.getElementById("darts").onclick　= () => {
 document.getElementById("reset").onclick = () => {
     deleteCircles();
     deleteMakers();
+    centerplace = null;
 }
 
 document.getElementById("now").onclick = () => {
