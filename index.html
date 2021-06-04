@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>ダーツ</title>
+        <script defer src="main.js"></script>
+        <script src="http://maps.google.com/maps/api/js?key=AIzaSyANbHP0iFqRsht_Bubk6mU5HxaAFbiLasw&libraries=drawing&language=ja"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>お手軽ダーツの旅（仮）</h1>
+        <div id="map"></div>
+        <table>
+            <tr>
+                <td>
+                    中心
+                </td>
+                <td>
+                    <input id="keyword"></input>
+                </td>
+                <td>
+                    <button id="search">検索</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    半径
+                </td>
+                <td>
+                    <input id="rad" type="number" min="0"></input>m
+                </td>
+                <td>
+                    <button id="draw">範囲を指定</button>
+                </td>
+            </tr>
+        </table>
+        <button id="darts">ダーツ</button>
+        <output id="result"></output>
+    </body>
+</html>
