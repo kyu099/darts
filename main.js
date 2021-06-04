@@ -46,7 +46,7 @@ document.getElementById("draw").onclick = () => {
 }
 
 document.getElementById("darts").onclick　= () => {
-    if(marker == null){alert("中心を指定してください")}
+    if(markers == null){alert("中心を指定してください")}
     if(circle == null){alert("範囲を指定してください")}
     else {
         while(1){
