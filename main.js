@@ -64,7 +64,7 @@ document.getElementById("darts").onclick　= () => {
 }
 
 function setMarker(setplace){
-    let iconUrl = 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png';
+    let iconUrl = 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png';
     let marker = new google.maps.Marker({
       position: setplace,
       map: map,
