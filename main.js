@@ -39,14 +39,14 @@ document.getElementById("search").onclick = () =>{
 
 document.getElementById("draw").onclick = () => {
     deleteCircles();
-    if(markers == null) {alert("中心を指定してください")};
+    if(markers.length == 0) {alert("中心を指定してください")};
     rad = document.getElementById("rad").value;
     if(rad <= 0){alert("正の値を入力してください");}
     else {setCircle(centerplace, parseFloat(rad));}
 }
 
 document.getElementById("darts").onclick　= () => {
-    if(markers == null){alert("中心を指定してください")}
+    if(markers.length == 0) {alert("中心を指定してください")}
     if(circle == null){alert("範囲を指定してください")}
     else {
         while(1){
