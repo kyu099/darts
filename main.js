@@ -63,6 +63,11 @@ document.getElementById("darts").onclick　= () => {
     }
 }
 
+document.getElementById("reset").onclick = () => {
+    deleteCircles();
+    deleteMakers();
+}
+
 function setMarker(setplace){
     let iconUrl = 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png';
     let marker = new google.maps.Marker({
