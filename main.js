@@ -45,7 +45,7 @@ document.getElementById("draw").onclick = () => {
     else {setCircle(centerplace, parseFloat(rad));}
 }
 
-document.getElementById("darts").onclick　= () => {
+document.getElementById("darts").onclick = () => {
     if(markers.length == 0) {alert("中心を指定してください")}
     if(circle == null){alert("範囲を指定してください")}
     else {
